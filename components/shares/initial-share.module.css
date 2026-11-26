@@ -1,0 +1,258 @@
+/* ระบบ: หุ้นสมาชิก การส่งหุ้น และยอดสะสม | รูปแบบการแสดงผลของ initial-share.module.css */
+.page {
+  composes: page from "./share-typography.module.css";
+  max-width: 900px;
+  margin: 0 auto;
+  color: #203650;
+}
+.heading {
+  display: block;
+  margin-bottom: 22px;
+}
+.heading > p {
+  font-size: 11px;
+  color: #879bb2;
+  margin: 0 0 8px;
+}
+.heading h1 {
+  font-size: var(--share-title-size);
+  margin: 0 0 10px;
+}
+.heading > span {
+  font-size: 12px;
+  color: #7c90a9;
+}
+.notice {
+  background: #fff8e8;
+  border: 1px solid #f2e0b3;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 22px;
+  font-size: 13px;
+  color: #8a6b27;
+}
+.notice p {
+  margin: 6px 0 0;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+  gap: 12px;
+}
+.steps li {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  font-size: 12px;
+  color: #8a9bb1;
+}
+.steps b {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #e7edf6;
+  flex: none;
+}
+.steps .current {
+  color: #2864d6;
+}
+.current b {
+  background: #2864d6;
+  color: #fff;
+}
+.card {
+  background: white;
+  border: 1px solid #dce6f2;
+  border-radius: 16px;
+  padding: 26px;
+}
+.card h2 {
+  font-size: var(--share-section-size);
+  margin: 0 0 14px;
+}
+.card p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #758ba5;
+}
+.page .amountLabel {
+  font-size: 13px;
+  margin-top: 22px;
+}
+.page .amountLabel input {
+  margin-top: 8px;
+  max-width: 360px;
+  height: 44px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.page .presets button {
+  padding: 7px 12px;
+  color: #3e6db0;
+  border-color: #dce6f2;
+  background: #fff;
+  font-size: 12px;
+}
+.page .presets button[aria-pressed="true"] {
+  border-color: #6f9de3;
+  background: #eff5ff;
+}
+.card .help {
+  font-size: 12px;
+  margin: 14px 0;
+}
+.summary {
+  margin: 18px 0;
+}
+.summary > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #edf1f7;
+  font-size: 13px;
+}
+.summary dt {
+  color: #7b90a9;
+}
+.summary dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
+.page .actions button {
+  font-size: 13px;
+  padding: 11px 17px;
+  background: white;
+  color: #496b9a;
+  border: 1px solid #d6e2f2;
+}
+.page .actions .primary {
+  background: #2864d6;
+  border-color: #2864d6;
+  color: white;
+}
+.page .methods {
+  display: grid;
+  gap: 12px;
+  border: 0;
+  padding: 0;
+  margin: 20px 0;
+}
+.methods legend {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.page .methods label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #dce6f2;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 0;
+}
+.page .methods input {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+}
+.methods strong {
+  display: block;
+  font-size: 13px;
+}
+.methods small {
+  display: block;
+  font-size: 11px;
+  color: #8a9db4;
+  margin-top: 5px;
+}
+.card .total {
+  font-size: 26px;
+  color: #2864d6;
+  font-weight: 700;
+}
+.total small {
+  font-size: 12px;
+  font-weight: 400;
+}
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  color: #956c1d;
+  padding: 6px 10px;
+  background: #fff4db;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+@media (max-width: 600px) {
+  .card {
+    padding: 18px;
+  }
+  .steps {
+    gap: 6px;
+  }
+  .steps li {
+    flex-direction: column;
+    font-size: 11px;
+    text-align: center;
+  }
+}
+
+.heading h1,
+.card h2 {
+  font-weight: 700;
+  line-height: 1.4;
+}
+.heading > span {
+  font-size: var(--share-text-size);
+  line-height: 1.7;
+}
+.card p,
+.summary > div,
+.page .amountLabel,
+.methods legend {
+  font-size: var(--share-text-size);
+}
+.page .amountLabel,
+.methods legend {
+  font-weight: 600;
+}
+.notice strong,
+.steps b,
+.page .actions button,
+.methods strong {
+  font-weight: 600;
+}
+.steps li,
+.page .presets button,
+.summary dt {
+  font-weight: 400;
+}
+.methods small {
+  font-size: var(--share-caption-size);
+  line-height: 1.7;
+}
+.card .total {
+  font-size: 24px;
+}

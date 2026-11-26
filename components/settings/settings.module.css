@@ -1,0 +1,53 @@
+/* ระบบ: ตั้งค่าและจัดการสิทธิ์ | รูปแบบการแสดงผลของ settings.module.css */
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.heading {
+  margin-bottom: 22px;
+}
+.heading h1 {
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+.heading p {
+  color: #8092a8;
+  font-size: 12px;
+  margin: 0;
+}
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid #dce6f2;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+.tabs a {
+  text-decoration: none;
+  color: #627b9c;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+.tabs a[aria-current="page"] {
+  background: #2864d6;
+  color: white;
+}
+.tabs a:focus-visible {
+  outline: 3px solid #accaff;
+  outline-offset: 3px;
+}
+.password {
+  max-width: 620px;
+}
+.password h2 {
+  margin: 0 0 16px;
+  font-size: 19px;
+}
+@media (max-width: 480px) {
+  .tabs a {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+}

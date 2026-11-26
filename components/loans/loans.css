@@ -1,0 +1,743 @@
+/* ระบบ: สินเชื่อ วงเงิน ผู้ค้ำ และชำระหนี้ | รูปแบบการแสดงผลของ loans.css */
+/* ระบบสินเชื่อใช้ layout ร่วมกับ Sidebar กลาง แยกการ์ด/ขั้นตอน/รายละเอียดให้อ่านง่าย */
+.loan-page {
+  max-width: 1280px;
+  margin: auto;
+  color: #203650;
+}
+.loan-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.loan-page .loan-breadcrumb {
+  font-size: 11px;
+  color: #6f86a5;
+  margin-bottom: 9px;
+}
+.loan-page h1 {
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+.loan-page h2 {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+.loan-page h3 {
+  font-size: 15px;
+  margin: 20px 0 12px;
+}
+.loan-page .loan-muted {
+  color: #76879d;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.loan-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #dce6f1;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  overflow: auto;
+}
+.loan-tabs button {
+  background: white;
+  color: #607792;
+  white-space: nowrap;
+}
+.loan-tabs button[aria-pressed="true"] {
+  background: #175dca;
+  color: white;
+  border-color: #175dca;
+}
+.loan-card {
+  border: 1px solid #dfe7f1;
+  border-radius: 16px;
+  background: white;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px #15355404;
+}
+.loan-products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.loan-product {
+  display: flex;
+  flex-direction: column;
+  min-height: 330px;
+}
+.loan-product.featured {
+  border-color: #6698e5;
+  box-shadow: 0 4px 20px #1761cf0a;
+}
+.loan-product > button {
+  width: 100%;
+  margin-top: auto;
+}
+.loan-product > .loan-muted {
+  min-height: 60px;
+}
+.loan-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #eaf2ff;
+  color: #1760c9;
+  font-size: 24px;
+  font-weight: bold;
+}
+.loan-pill {
+  font-size: 10px;
+  border-radius: 20px;
+  color: #336cab;
+  background: #eff5fd;
+  padding: 6px 10px;
+}
+.loan-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+.loan-section-title h2 {
+  margin: 0;
+}
+.loan-section-title small {
+  display: block;
+  color: #6783a5;
+  margin-bottom: 6px;
+}
+.loan-page dl {
+  margin: 16px 0 24px;
+}
+.loan-page dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid #f0f3f8;
+  padding: 11px 0;
+  font-size: 12px;
+}
+.loan-page dt {
+  color: #71859c;
+}
+.loan-page dd {
+  font-weight: 600;
+  text-align: right;
+}
+.loan-info p {
+  font-size: 13px;
+  color: #6a8099;
+  line-height: 1.9;
+  margin: 8px 0;
+}
+.loan-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.loan-kpis .loan-card {
+  padding: 20px;
+}
+.loan-kpis small {
+  color: #72869f;
+  font-size: 12px;
+}
+.loan-kpis strong {
+  display: block;
+  font-size: 30px;
+  color: #175dca;
+  margin-top: 10px;
+}
+.loan-kpis strong small {
+  display: inline;
+  font-size: 11px;
+  font-weight: normal;
+}
+.loan-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.loan-page table {
+  min-width: 650px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.loan-page th {
+  background: #f3f7fc;
+  color: #647b96;
+  padding: 14px;
+  text-align: left;
+}
+.loan-page td {
+  padding: 16px 14px;
+  border-bottom: 1px solid #edf1f6;
+}
+.loan-page td small {
+  color: #8b9aab;
+  margin-top: 5px;
+  font-size: 10px;
+}
+.loan-status {
+  display: inline-block;
+  font-size: 10px;
+  padding: 6px 9px;
+  border-radius: 7px;
+  background: #eef3fa;
+  color: #5e7390;
+  white-space: nowrap;
+}
+.loan-status.submitted,
+.loan-status.checking,
+.loan-status.forwarded {
+  background: #eaf2ff;
+  color: #2162be;
+}
+.loan-status.approved,
+.loan-status.active,
+.loan-status.closed {
+  background: #e9f8ed;
+  color: #22804e;
+}
+.loan-status.needs_documents {
+  background: #fff3dd;
+  color: #ad741d;
+}
+.loan-status.rejected {
+  background: #feebed;
+  color: #b3404b;
+}
+.loan-empty {
+  text-align: center;
+  color: #91a0b3;
+  padding: 45px 15px;
+  font-size: 13px;
+}
+.loan-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.loan-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 25px;
+}
+.loan-steps span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: #8a9ab0;
+  border-bottom: 3px solid #e2e9f2;
+  padding: 13px 0;
+}
+.loan-steps b {
+  background: #e5edf7;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+.loan-steps .done {
+  color: #1b62c4;
+  border-color: #246cce;
+}
+.loan-steps .done b {
+  background: #2563ca;
+  color: white;
+}
+.loan-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(260px, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+.loan-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 20px;
+}
+.loan-page .loan-form-grid label {
+  margin: 10px 0;
+}
+.loan-summary {
+  position: sticky;
+  top: 22px;
+  background: #fbfdff;
+}
+.loan-summary .loan-icon {
+  margin-bottom: 18px;
+}
+.loan-summary > p {
+  font-size: 12px;
+  color: #6d829e;
+  line-height: 1.9;
+}
+.loan-summary h3 {
+  margin-top: 25px;
+}
+.loan-result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+  padding: 18px;
+  background: #f0f6ff;
+  border-radius: 12px;
+}
+.loan-result-grid small {
+  font-size: 10px;
+  color: #6c85a5;
+}
+.loan-result-grid strong {
+  display: block;
+  font-size: 17px;
+  margin-top: 9px;
+  color: #155ebf;
+}
+.loan-checks {
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
+}
+.loan-checks .passed {
+  color: #238350;
+}
+.loan-checks .failed {
+  color: #b44747;
+}
+.loan-page .panel {
+  padding: 24px;
+  margin-top: 18px;
+  border-color: #dfe7f1;
+  box-shadow: none;
+}
+.loan-page .panel > p {
+  line-height: 1.9;
+  font-size: 13px;
+  color: #72869f;
+  margin: 8px 0;
+}
+.loan-page .panel > h2 {
+  font-size: 20px;
+}
+.loan-page .panel .form {
+  max-width: 100%;
+  background: #f7faff;
+  border: 1px solid #e3ebf6;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 18px 0;
+}
+.loan-page .panel li {
+  padding: 12px;
+  background: #f5f8fc;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.loan-page .panel ul {
+  list-style: none;
+  padding: 0;
+}
+.loan-page .panel .actions {
+  padding: 12px 0;
+}
+.loan-page details {
+  padding: 14px 0;
+  border-top: 1px solid #e6edf6;
+  margin-top: 20px;
+}
+.loan-page summary {
+  font-size: 13px;
+}
+.loan-page .loan-settings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.loan-page .loan-settings .panel {
+  margin: 0;
+}
+.loan-page button:focus-visible,
+.loan-page input:focus-visible,
+.loan-page select:focus-visible {
+  outline: 2px solid #266ed1;
+  outline-offset: 3px;
+}
+.loan-page .error {
+  margin-bottom: 18px;
+  border-radius: 10px;
+}
+.loan-page .ok {
+  background: #eaf8ef;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+@media (max-width: 1100px) {
+  .loan-products {
+    grid-template-columns: 1fr;
+  }
+  .loan-product {
+    min-height: 0;
+  }
+  .loan-product > .loan-muted {
+    min-height: 0;
+  }
+  .loan-columns {
+    grid-template-columns: 1fr;
+  }
+  .loan-summary {
+    position: static;
+  }
+  .loan-kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .loan-page .loan-settings {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 650px) {
+  .loan-card {
+    padding: 18px;
+  }
+  .loan-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .loan-heading h1 {
+    font-size: 23px;
+  }
+  .loan-steps {
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .loan-filters,
+  .loan-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .loan-result-grid {
+    grid-template-columns: 1fr;
+  }
+  .loan-result-grid > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .loan-result-grid strong {
+    margin: 0;
+    font-size: 16px;
+  }
+  .loan-section-title {
+    flex-wrap: wrap;
+  }
+  .loan-page .panel {
+    padding: 18px;
+  }
+}
+
+/* ตารางผ่อน: เลื่อนแนวนอนได้บนหน้าจอเล็ก */
+.loan-contract-detail {
+  margin-top: 20px;
+}
+.loan-contract-note {
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #355d8c;
+}
+.loan-schedule-section {
+  margin: 28px 0;
+}
+.loan-schedule-section table {
+  min-width: 680px;
+  font-size: 13px;
+}
+.loan-schedule-section th,
+.loan-schedule-section td {
+  padding: 12px 10px;
+  white-space: nowrap;
+}
+.loan-schedule-section tfoot {
+  background: #f0f5fc;
+  font-weight: 600;
+}
+/* คำอธิบายใต้ตาราง ใช้ข้อความเล็กโดยไม่มีการ์ดสูตรขนาดใหญ่ */
+.loan-page .loan-calculation {
+  margin: 12px 0 20px;
+  padding: 10px 12px;
+  border-left: 3px solid #c7d9f0;
+  color: #617994;
+  background: #f7f9fc;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.loan-page .loan-calculation p {
+  margin: 0;
+  font-size: inherit;
+}
+.loan-page .loan-calculation p + p {
+  margin-top: 4px;
+}
+.loan-page .loan-calculation strong {
+  color: #355d8c;
+}
+/* ข้อมูลผู้ค้ำแยกจากฟอร์มเงินกู้ ชื่อเป็นช่องอ่านอย่างเดียว */
+.loan-guarantor-fields {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid #dfe7f1;
+  border-radius: 12px;
+  background: #f8faff;
+}
+.loan-page .loan-guarantor-fields h3 {
+  margin-top: 0;
+}
+.loan-guarantor-required {
+  color: #94600c;
+  font-size: 13px;
+}
+.loan-guarantor-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.loan-guarantor-search {
+  display: flex;
+  gap: 8px;
+}
+.loan-guarantor-search input {
+  min-width: 0;
+}
+.loan-guarantor-search button {
+  white-space: nowrap;
+  font-size: 12px;
+}
+.loan-guarantor-inputs input:disabled {
+  background: #eaf0f6;
+  color: #5d718a;
+  opacity: 1;
+}
+.loan-guarantor-detail {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #f1f6fd;
+  font-size: 13px;
+}
+@media (max-width: 700px) {
+  .loan-guarantor-inputs {
+    grid-template-columns: 1fr;
+  }
+}
+/* วงเงินกู้ด้วยสินทรัพย์ แสดงเงินคงค้างและวงเงินว่างจากข้อมูลชุดเดียวกับ API */
+.loan-asset-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #eaf2ff;
+  font-size: 13px;
+}
+.loan-asset-total strong {
+  color: #185cb9;
+  font-size: 17px;
+}
+.loan-capacity-list {
+  margin: 12px 0;
+  font-size: 12px;
+}
+.loan-capacity-list > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e1e9f3;
+}
+.loan-capacity-list dd {
+  margin: 0;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.loan-capacity-available {
+  background: #e9f7f0;
+}
+.loan-capacity-available strong {
+  color: #14865a;
+}
+.loan-borrowing-modes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 14px 0;
+  font-size: 13px;
+}
+.loan-page .loan-borrowing-modes label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+.loan-borrowing-modes input {
+  width: auto;
+}
+.loan-payment-section {
+  margin: 22px 0;
+  padding: 18px;
+  border: 1px solid #dce7f5;
+  border-radius: 12px;
+  background: #f9fbff;
+}
+.loan-payment-fields {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.loan-payment-fields > label {
+  max-width: 520px;
+}
+.loan-payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.loan-payment-methods label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+.loan-payment-methods input {
+  width: auto;
+}
+.loan-payment-fields > button {
+  justify-self: end;
+  min-width: 200px;
+}
+.loan-payment-qr {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  max-width: 600px;
+}
+.loan-payment-qr img {
+  flex-shrink: 0;
+  border: 1px solid #e0e8f3;
+  border-radius: 8px;
+}
+@media (max-width: 550px) {
+  .loan-payment-qr {
+    flex-direction: column;
+    align-items: start;
+  }
+  .loan-payment-fields > button {
+    width: 100%;
+  }
+}
+.loan-disbursement-choice {
+  border: 1px solid #dce7f5;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 16px 0;
+}
+.loan-disbursement-choice legend {
+  padding: 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.loan-disbursement-choice label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 22px;
+  font-size: 13px;
+}
+.loan-disbursement-choice input {
+  width: auto;
+}
+.loan-guarantor-inputs + .loan-guarantor-inputs {
+  margin-top: 14px;
+}
+
+.loan-policy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 18px 0;
+}
+.loan-policy-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.loan-policy-grid input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #cfdcf0;
+  border-radius: 8px;
+  padding: 12px;
+  color: #203a5b;
+  font: inherit;
+}
+.loan-policy-grid input[readonly] {
+  background: #e9edf4;
+  color: #7b89a0;
+}
+.loan-asset-policy > h2 {
+  font-size: 18px;
+}
+.loan-asset-policy .loan-muted {
+  font-size: 12px;
+  line-height: 1.7;
+}
+@media (max-width: 800px) {
+  .loan-policy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.loan-settings > .loan-asset-policy {
+  grid-column: 1 / -1;
+}
+
+/* เจ้าหน้าที่ตรวจคำขอสินเชื่อ: รวมข้อมูลจากหน้าสมาชิกก่อนปุ่มตัดสิน */
+.loan-application-review { border-top:1px solid #e1eaf7; border-bottom:1px solid #e1eaf7; margin:22px 0; padding:20px 0; }
+.loan-application-review .loan-section-title h3 { margin:0; }
+.loan-review-member { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 20px; padding:16px; background:#f7faff; border:1px solid #e3ebf6; border-radius:12px; }
+.loan-review-member > div { min-width:0; }
+.loan-review-member span,.loan-review-metrics span { display:block; font-size:12px; color:#72869f; margin-bottom:6px; }
+.loan-review-member strong { font-size:13px; overflow-wrap:anywhere; }
+.loan-review-metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:18px 0; }
+.loan-review-metrics > div { border:1px solid #e1ebfa; border-radius:12px; padding:16px; background:#f7faff; min-width:0; }
+.loan-review-metrics strong { display:block; color:#175dca; font-size:19px; overflow-wrap:anywhere; }
+.loan-review-metrics small { display:block; color:#72869f; font-size:11px; margin-top:8px; }
+.loan-review-details { border:1px solid #e1ebfa; border-radius:10px; padding:14px; margin:12px 0; }
+.loan-review-details summary { color:#285f9f; cursor:pointer; font-size:13px; font-weight:600; }
+.loan-review-details table { margin-top:14px; }
+.loan-review-check-detail { display:block; margin-top:6px; }
+.loan-review-guarantors p { display:flex; align-items:center; flex-wrap:wrap; gap:12px; font-size:13px; }
+@media(max-width:850px){.loan-review-metrics {grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:550px){.loan-review-metrics,.loan-review-member {grid-template-columns:1fr;}.loan-review-metrics strong {font-size:18px;}}

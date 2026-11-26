@@ -1,0 +1,40 @@
+/* ระบบ: ประวัติธุรกรรมและเอกสาร | รูปแบบการแสดงผลของ transactions.css */
+.transaction-page {
+  max-width: 1200px;
+  margin: auto;
+  color: #203650;
+}
+.transaction-page h1 {
+  font-size: 26px;
+}
+.transaction-page > p {
+  color: #7185a0;
+  font-size: 13px;
+}
+.transaction-filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 12px;
+}
+.transaction-filters label {
+  font-size: 12px;
+}
+.transaction-page table {
+  width: 100%;
+  font-size: 13px;
+}
+.transaction-page td small {
+  display: block;
+  color: #7a8ba0;
+  margin-top: 5px;
+}
+@media (max-width: 900px) {
+  .transaction-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .transaction-filters {
+    grid-template-columns: 1fr;
+  }
+}

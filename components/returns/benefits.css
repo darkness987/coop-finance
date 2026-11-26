@@ -1,0 +1,220 @@
+/* ระบบ: ปันผล เฉลี่ยคืน และบัญชีรับผลตอบแทน | รูปแบบการแสดงผลของ benefits.css */
+.benefits-page {
+  max-width: 1240px;
+  margin: auto;
+  color: #203650;
+  font-size: 13px;
+}
+.benefits-page h1 {
+  font-size: 26px;
+  margin: 8px 0;
+}
+.benefits-page h2 {
+  font-size: 17px;
+  margin: 0 0 16px;
+}
+.benefits-muted {
+  color: #7489a6;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.benefits-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 22px 0;
+}
+.benefits-stats article,
+.benefits-card {
+  padding: 22px;
+  background: white;
+  border: 1px solid #dce6f3;
+  border-radius: 14px;
+}
+.benefits-stats article {
+  display: grid;
+  gap: 10px;
+}
+.benefits-stats span {
+  color: #6e86a6;
+}
+.benefits-stats strong {
+  font-size: 20px;
+}
+.benefits-stats small {
+  color: #7489a6;
+}
+.benefits-card {
+  margin-bottom: 20px;
+}
+.benefits-green {
+  color: #139b77;
+}
+.benefits-columns {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+}
+.benefits-estimate {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-bottom: 16px;
+}
+.benefits-estimate > div {
+  display: grid;
+  gap: 8px;
+  flex: 1;
+  min-width: 150px;
+}
+.benefits-estimate span {
+  color: #7489a6;
+}
+.benefits-estimate strong {
+  font-size: 18px;
+  color: #1964ca;
+}
+.benefits-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.benefits-account-card h2 {
+  margin-bottom: 8px;
+}
+.benefits-account-subtitle {
+  margin: 0 0 20px;
+}
+.benefits-bank {
+  display: grid;
+  gap: 18px;
+  background: #f3f6fc;
+  border: 1px solid #dfe7f3;
+  border-radius: 10px;
+  padding: 16px 14px 12px;
+}
+.benefits-bank-label {
+  color: #6e86a6;
+  font-size: 12px;
+}
+.benefits-bank-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 0 2px 8px;
+}
+.benefits-bank-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #e2f3e9;
+  color: #21835c;
+  border: 1px solid #bddfce;
+}
+.benefits-bank-icon svg {
+  width: 22px;
+  height: 22px;
+}
+.benefits-bank-details {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  font-size: 13px;
+}
+.benefits-bank-details strong {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.benefits-bank-number {
+  color: #203650;
+  letter-spacing: 0.4px;
+}
+.benefits-bank-details small {
+  color: #7489a6;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.benefits-bank-empty {
+  margin: 4px 0 12px;
+  color: #7489a6;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.benefits-page .benefits-bank-edit {
+  width: 100%;
+  padding: 8px 12px;
+  min-height: 34px;
+  border-radius: 5px;
+  border: 1px solid #aac8db;
+  background: #f9fcff;
+  color: #397590;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: none;
+}
+.benefits-page .benefits-bank-edit:hover {
+  background: #eaf4fb;
+  border-color: #78a6c4;
+}
+.benefits-bank-form input {
+  background: white;
+}
+.benefits-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+.benefits-page form label {
+  margin-top: 10px;
+}
+.benefits-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 12px;
+  min-height: 210px;
+  padding: 16px 0;
+}
+.benefits-bar-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+.benefits-bar {
+  width: 42px;
+  background: #2568d9;
+  border-radius: 4px 4px 0 0;
+}
+.benefits-page table {
+  width: 100%;
+  font-size: 12px;
+}
+.benefits-page td small {
+  display: block;
+  color: #7489a6;
+}
+@media (max-width: 850px) {
+  .benefits-stats,
+  .benefits-columns {
+    grid-template-columns: 1fr;
+  }
+  .benefits-estimate strong {
+    font-size: 16px;
+  }
+}
+.benefits-demo-note {
+  padding: 12px 16px;
+  background: #fff7e9;
+  border: 1px solid #f0dfb6;
+  border-radius: 10px;
+  color: #92702c;
+  font-size: 12px;
+  line-height: 1.8;
+}

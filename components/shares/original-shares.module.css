@@ -1,0 +1,330 @@
+/* ระบบ: หุ้นสมาชิก การส่งหุ้น และยอดสะสม | รูปแบบการแสดงผลของ original-shares.module.css */
+/* โครงหน้าส่งหุ้นต้นฉบับ ใช้เมนูส่วนกลางและขนาดฟอร์มกระชับ */
+.page {
+  composes: page from "./share-typography.module.css";
+  --ink: #201842;
+  --muted: #625978;
+  --accent: #6427cd;
+  --border: #ded7ef;
+  --surface: #fffeff;
+  color: var(--ink);
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.page :global(.stats) {
+  margin-bottom: 20px;
+}
+.page :global(.stat strong) {
+  font-size: 20px;
+}
+.page :global(.tabs) {
+  margin-bottom: 20px;
+}
+.page :global(.form) {
+  padding: 0 16px 14px;
+}
+.page :global(.form > label > input) {
+  max-width: 480px;
+  height: 40px;
+  padding: 8px 11px;
+  font-size: 14px;
+}
+.page :global(.form fieldset) {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.page :global(.form label.radio) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin: 8px 0;
+}
+.page :global(.radio input) {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+.page :global(input:disabled) {
+  background: #eef2f7;
+  color: #64748b;
+  cursor: not-allowed;
+}
+.page :global(.form button) {
+  justify-self: start;
+  font-size: 13px;
+}
+.page :global(.form > small) {
+  font-size: 11px;
+  line-height: 1.7;
+}
+.pending {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fff7e8;
+  color: #967128;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.pending small {
+  display: block;
+}
+@media (max-width: 650px) {
+  .page :global(.stat strong) {
+    font-size: 20px;
+  }
+}
+
+/* จัดลำดับน้ำหนักฟอนต์: หัวข้อเด่น ข้อความและตัวเลขในฟอร์มน้ำหนักปกติ */
+.page :global(.module-content header h1) {
+  font-size: var(--share-title-size);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.page :global(.module-content header p) {
+  font-size: var(--share-text-size);
+  font-weight: 400;
+  line-height: 1.7;
+}
+.page :global(.panel-heading h2) {
+  font-size: var(--share-section-size);
+  font-weight: 700;
+}
+.page :global(.stat) {
+  font-size: var(--share-text-size);
+  font-weight: 400;
+  line-height: 1.6;
+}
+.page :global(.stat strong) {
+  font-weight: 700;
+  line-height: 1.4;
+}
+.page :global(.stat small) {
+  font-size: var(--share-caption-size);
+  font-weight: 400;
+}
+.page :global(.tabs button) {
+  font-size: var(--share-text-size);
+  font-weight: 600;
+}
+.page :global(.tabs button svg) {
+  width: 18px;
+  height: 18px;
+}
+.page :global(.form) {
+  font-size: var(--share-text-size);
+  line-height: 1.7;
+}
+.page :global(.form label),
+.page :global(.form legend) {
+  font-size: var(--share-text-size);
+  font-weight: 600;
+}
+.page :global(.form input) {
+  font-weight: 400;
+}
+.page :global(.form p),
+.page :global(.details div),
+.page :global(table) {
+  font-size: var(--share-text-size);
+  font-weight: 400;
+}
+.page :global(.details dd),
+.page :global(th),
+.page :global(.form button) {
+  font-weight: 600;
+}
+.page :global(.status) {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* คืนหน้าตาจาก coop-finance ต้นฉบับ โดยจำกัดสีไว้เฉพาะหน้าหุ้น */
+.page :global(.stat.coins) {
+  background: linear-gradient(145deg, #f1dfff, #e9d9fa);
+}
+.page :global(.stat.coins svg) {
+  color: #7028d8;
+}
+.page :global(.stat.calendar) {
+  background: linear-gradient(145deg, #dfe9ff, #e8edff);
+}
+.page :global(.stat.calendar svg) {
+  color: #2a5bda;
+}
+.page :global(.stat.percent) {
+  background: linear-gradient(145deg, #d8f8df, #e6f7e6);
+}
+.page :global(.stat.refund) {
+  background: linear-gradient(145deg, #ffe8cd, #fff1e2);
+}
+.page :global(.tabs button),
+.page :global(.outline) {
+  background: #f1ecfb;
+  border-color: var(--border);
+  color: var(--ink);
+}
+.page :global(.tabs button[aria-pressed="true"]),
+.page :global(.primary) {
+  background: linear-gradient(175deg, #963fea, #5225bf);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 3px 7px #682ac02d;
+}
+.page :global(.outline) {
+  color: var(--accent);
+}
+.page :global(.panel) {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: 0 3px 8px #35226408;
+}
+.page :global(.panel-heading h2) {
+  font-size: 17px;
+}
+.page :global(.details div),
+.page :global(td) {
+  border-bottom-color: #eae4f4;
+}
+.page :global(.form input:not([type="radio"])) {
+  border-color: #d5cbe9;
+}
+.page :global(input[type="radio"]) {
+  accent-color: var(--accent);
+}
+.page :global(th) {
+  background: #f0eafa;
+}
+.page :global(.split) {
+  grid-template-columns: minmax(0, 1.7fr) minmax(240px, 1fr);
+  gap: 14px;
+}
+@media (max-width: 900px) {
+  .page :global(.split) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.monthlySummary {
+  background: #faf8fe;
+  border: 1px solid #e7dff3;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 4px 0 10px;
+}
+.monthlySummary dl {
+  margin: 0;
+}
+.monthlySummary dl > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 5px 0;
+  font-size: 12px;
+}
+.monthlySummary dt {
+  color: #796a91;
+}
+.monthlySummary dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+}
+.page .monthlySummary p {
+  margin: 8px 0 0;
+  padding-top: 8px;
+  border-top: 1px solid #eae4f4;
+  font-size: 11px;
+  color: #8b7c9f;
+  line-height: 1.7;
+}
+@media (max-width: 500px) {
+  .monthlySummary dl > div {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .monthlySummary dd {
+    text-align: left;
+  }
+}
+
+/* หน้าส่งหุ้นแสดงเฉพาะงวดและยอดที่กำหนด สถานะรายการอยู่ในประวัติ */
+.sendPeriod {
+  margin: 4px 0 8px;
+  padding: 10px 12px;
+  border: 1px solid #e7dff3;
+  border-radius: 8px;
+  background: #faf8fe;
+  font-size: 12px;
+  color: #796a91;
+}
+.page .sendPeriod p {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #201842;
+}
+.sendPeriod strong {
+  font-weight: 600;
+}
+.page :global(.form) .sendButton {
+  justify-self: end;
+  width: 180px;
+  max-width: 100%;
+  min-height: 42px;
+}
+
+.page :global(.form) .requestButton {
+  width: 180px;
+  max-width: 100%;
+  min-height: 42px;
+}
+
+.page .sendPeriod .remainingDue {
+  color: #b17815;
+}
+.page .sendPeriod .fullyPaid {
+  color: #27814d;
+}
+
+/* ฟอร์มรับพื้นที่หลัก ส่วนกฎหุ้นใช้คอลัมน์รองที่กระชับ */
+.page :global(.split .form) {
+  max-width: none;
+}
+.page :global(.split .form > label > input) {
+  max-width: none;
+}
+
+/* กล่องกฎขนาดกะทัดรัด ฟอร์มส่งหุ้นใช้ความกว้างที่เหลือ */
+.page .sendLayout {
+  grid-template-columns: minmax(0, 1fr) 250px;
+}
+.page .sendLayout > :global(.panel:last-child) {
+  width: 250px;
+  height: auto;
+  box-sizing: border-box;
+  align-self: start;
+}
+.page .sendLayout > :global(.panel:last-child .panel-heading) {
+  padding: 12px 12px 8px;
+}
+.page .sendLayout > :global(.panel:last-child .panel-heading h2) {
+  font-size: 15px;
+}
+.page .sendLayout > :global(.panel:last-child .details) {
+  padding: 0 12px 12px;
+}
+.page .sendLayout > :global(.panel:last-child .details div) {
+  font-size: 12px;
+  gap: 6px;
+}
+@media (max-width: 900px) {
+  .page .sendLayout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,709 @@
+/* ระบบ: เงินฝาก ถอนเงิน และดอกเบี้ย | รูปแบบการแสดงผลของ deposits.css */
+/* หน้าสมาชิกและเจ้าหน้าที่แยก component ใช้ตารางและ style ร่วมในหมวดเงินฝากเท่านั้น */
+.deposit-page {
+  max-width: 1240px;
+  margin: auto;
+  color: #203650;
+}
+.deposit-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.deposit-page h1 {
+  font-size: 25px !important;
+  margin: 8px 0 10px !important;
+}
+.deposit-breadcrumb {
+  font-size: 11px;
+  color: #8fa0b4;
+}
+.deposit-muted {
+  font-size: 12px;
+  color: #7e91a9;
+  line-height: 1.8;
+}
+.deposit-card {
+  border: 1px solid #dfe7f1;
+  border-radius: 14px;
+  background: white;
+  padding: 22px;
+  margin-bottom: 22px;
+  min-width: 0;
+}
+.deposit-card h2 {
+  font-size: 16px;
+  margin: 0 0 18px;
+  color: #2a4565;
+}
+.deposit-role {
+  font-size: 11px;
+  border: 1px solid #cfe0f7;
+  background: #edf5ff;
+  color: #3671b8;
+  padding: 9px 12px;
+  border-radius: 7px;
+}
+.deposit-link {
+  color: #2867c8;
+  background: white;
+  border: 1px solid #d8e5f5;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 11px;
+}
+.deposit-tabs {
+  display: flex;
+  gap: 8px;
+  overflow: auto;
+  margin-bottom: 24px;
+  padding: 5px;
+  background: #e9f0f9;
+  border-radius: 10px;
+}
+.deposit-tabs a,
+.deposit-tabs button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+  white-space: nowrap;
+  padding: 11px 14px;
+  border: 0;
+  background: none;
+  color: #7187a1;
+  font-size: 12px;
+  border-radius: 7px;
+}
+.deposit-tabs [aria-pressed="true"],
+.deposit-tabs [aria-current="page"] {
+  background: #2864d6;
+  color: white;
+}
+.deposit-tabs b {
+  padding: 3px 7px;
+  border-radius: 5px;
+  background: #ffffff2b;
+  font-size: 10px;
+}
+.deposit-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.deposit-kpis .deposit-card > small {
+  font-size: 11px;
+  color: #8093ac;
+}
+.deposit-kpis strong {
+  display: block;
+  font-size: 23px;
+  color: #245d9f;
+  margin-top: 14px;
+  white-space: nowrap;
+}
+.deposit-kpis strong small {
+  display: inline;
+  font-size: 10px;
+  font-weight: normal;
+  margin-left: 8px;
+  color: #94a3b7;
+}
+.deposit-columns {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+.deposit-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.deposit-section-heading h2 {
+  margin: 0;
+}
+.deposit-section-heading > span {
+  font-size: 11px;
+  color: #91a2b8;
+}
+.deposit-section-heading label {
+  font-size: 11px;
+  color: #8093ac;
+  margin: 0 !important;
+}
+.deposit-section-heading select {
+  width: 170px !important;
+}
+.deposit-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 0.7fr) minmax(
+      130px,
+      0.5fr
+    );
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.deposit-page input,
+.deposit-page select {
+  font-size: 12px !important;
+}
+.deposit-page table {
+  min-width: 700px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.deposit-page th {
+  padding: 14px 12px;
+  background: #f4f8fd;
+  font-size: 11px;
+  font-weight: 600;
+  color: #758ba6;
+  text-align: left;
+}
+.deposit-page td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #ecf1f7;
+}
+.deposit-page td small {
+  font-size: 10px;
+  color: #91a1b5;
+  margin-top: 6px;
+  line-height: 1.7;
+}
+.deposit-amount {
+  font-weight: 600;
+  white-space: nowrap;
+}
+.deposit-page button {
+  font-size: 11px;
+  padding: 9px 12px;
+  border-radius: 7px;
+}
+.deposit-page .deposit-primary {
+  background: #2865d3;
+  color: white;
+  border: 1px solid #2865d3;
+}
+.deposit-page button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.deposit-actions {
+  display: flex;
+  gap: 7px;
+  white-space: nowrap;
+}
+.deposit-status {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 6px 9px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.deposit-status.confirmed {
+  background: #ebf8f0;
+  color: #2a8b60;
+}
+.deposit-status.pending {
+  background: #fff4e1;
+  color: #aa8137;
+}
+.deposit-status.rejected {
+  background: #ffedf0;
+  color: #b15464;
+}
+.deposit-type {
+  font-size: 11px;
+  color: #3978b9;
+}
+.deposit-type.withdrawal {
+  color: #bf6470;
+}
+.deposit-type.interest {
+  color: #299978;
+}
+.deposit-rule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #edf2f8;
+  padding: 16px 0;
+  font-size: 12px;
+}
+.deposit-rule > span {
+  color: #8598b0;
+}
+.deposit-rule strong {
+  text-align: right;
+  font-weight: 600;
+}
+.deposit-note {
+  background: #f1f6ff;
+  border: 1px solid #e1ebfa;
+  padding: 15px;
+  border-radius: 9px;
+  font-size: 11px;
+  color: #6884a8;
+  line-height: 1.9;
+  margin-top: 20px;
+}
+.deposit-form {
+  margin-top: 22px;
+}
+.deposit-form label {
+  font-size: 12px;
+  color: #5e7796;
+  margin: 18px 0 !important;
+}
+.deposit-form input,
+.deposit-form select {
+  margin-top: 9px;
+}
+.deposit-form > button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+}
+.deposit-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.deposit-empty {
+  text-align: center;
+  padding: 35px;
+  color: #91a3b9;
+  font-size: 12px;
+}
+.deposit-open {
+  max-width: 650px;
+}
+.deposit-open p {
+  font-size: 12px;
+  color: #8396af;
+  line-height: 1.9;
+}
+.deposit-icon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  background: #eef5ff;
+  border-radius: 12px;
+  color: #397bc7;
+  font-size: 25px;
+  margin-bottom: 18px;
+}
+.deposit-balance {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  background: linear-gradient(120deg, #1e61ce, #387fea);
+  border-radius: 15px;
+  padding: 28px;
+  color: white;
+  margin-bottom: 24px;
+}
+.deposit-balance p {
+  font-size: 12px;
+  color: #c2dcff;
+}
+.deposit-balance strong {
+  display: block;
+  font-size: 28px;
+  margin: 13px 0 20px;
+  white-space: nowrap;
+}
+.deposit-balance small {
+  display: inline;
+  font-size: 11px;
+  font-weight: normal;
+}
+.deposit-balance span {
+  font-size: 11px;
+  color: #c5dcfa;
+}
+.deposit-shortcut {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 17px !important;
+  margin: 14px 0;
+  background: #f7faff;
+  border-color: #dfe8f6 !important;
+  color: #3a6aa1;
+  text-align: left;
+}
+.deposit-account-detail {
+  border-top: 1px solid #dfe8f4;
+  margin-top: 25px;
+  padding-top: 24px;
+}
+.deposit-page .error {
+  border-radius: 9px;
+  margin-bottom: 20px;
+}
+.deposit-page .ok {
+  background: #edf9f2;
+  border-radius: 9px;
+  padding: 14px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+@media (max-width: 1100px) {
+  .deposit-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .deposit-columns {
+    grid-template-columns: 1fr;
+  }
+  .deposit-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .deposit-filters > input {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 650px) {
+  .deposit-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .deposit-heading h1 {
+    font-size: 23px !important;
+  }
+  .deposit-card {
+    padding: 18px;
+  }
+  .deposit-kpis {
+    gap: 10px;
+  }
+  .deposit-kpis strong {
+    font-size: 20px;
+  }
+  .deposit-balance {
+    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+  .deposit-balance strong {
+    font-size: 25px;
+  }
+  .deposit-balance > div + div {
+    border-top: 1px solid #ffffff30;
+    padding-top: 20px;
+  }
+  .deposit-tabs a,
+  .deposit-tabs button {
+    flex: none;
+  }
+  .deposit-filters,
+  .deposit-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .deposit-section-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+/* ตัวเลือกรูปแบบเงินฝากที่เข้าถึงได้แม้สมาชิกมีบัญชีอยู่แล้ว */
+.deposit-products-section {
+  margin-bottom: 24px;
+}
+.deposit-products-section h2 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+.deposit-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.deposit-page .deposit-product {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid #dce6f3;
+}
+.deposit-page .deposit-product.selected {
+  border-color: #2169e3;
+  box-shadow: 0 0 0 1px #2169e3;
+}
+.deposit-product-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  min-height: 62px;
+  margin-bottom: 18px;
+}
+.deposit-product-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #eaf3ff;
+  color: #1668df;
+  flex: none;
+}
+.deposit-product-icon svg {
+  width: 25px;
+  height: 25px;
+}
+.deposit-selected-badge {
+  font-size: 10px;
+  color: #1767d5;
+  border-radius: 20px;
+  background: #eaf3ff;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+.deposit-page .deposit-product h3 {
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0 0 6px;
+  color: #18324f;
+}
+.deposit-product-description {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #7a8fae;
+}
+.deposit-product-intro {
+  border-top: 1px solid #e0e8f3;
+  border-bottom: 1px solid #e0e8f3;
+  padding: 13px 0;
+}
+.deposit-product-intro > div,
+.deposit-product-terms > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+  line-height: 1.7;
+}
+.deposit-product-intro span,
+.deposit-product-terms dt {
+  color: #7a8fae;
+}
+.deposit-product-intro strong {
+  font-weight: 500;
+  white-space: nowrap;
+}
+.deposit-product-intro p {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #7a8fae;
+  margin: 10px 0 0;
+  min-height: 38px;
+}
+.deposit-product-terms {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0;
+}
+.deposit-product-terms dd {
+  margin: 0;
+  color: #263d59;
+  text-align: right;
+}
+.deposit-product-account {
+  border-top: 1px solid #edf1f7;
+  padding: 12px 0 18px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 72px;
+}
+.deposit-product-account > span,
+.deposit-product-account > small,
+.deposit-product-account p {
+  color: #8a9bb0;
+  font-size: 10px;
+  margin: 0;
+}
+.deposit-product-account > strong {
+  font-size: 19px;
+  color: #2b527e;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.deposit-product-account strong small {
+  font-size: 10px;
+  font-weight: 400;
+}
+.deposit-page .deposit-product > button {
+  margin-top: 0;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.deposit-product-select {
+  background: #fff;
+  color: #2169d5;
+  border: 1px solid #d7e4f6;
+}
+.deposit-product-select:hover {
+  background: #f0f6ff;
+}
+.deposit-product button:focus-visible {
+  outline: 3px solid #99c1ff;
+  outline-offset: 3px;
+}
+.deposit-account-picker {
+  display: flex;
+  justify-content: flex-end;
+  margin: -4px 0 22px;
+}
+.deposit-account-picker label {
+  width: 100%;
+  max-width: 470px;
+  margin: 0 !important;
+  font-size: 11px;
+  color: #7f95af;
+}
+.deposit-account-picker select {
+  margin-top: 8px;
+}
+.deposit-channels {
+  border: 0;
+  margin: 20px 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.deposit-channels legend {
+  font-size: 12px;
+  color: #5e7796;
+  margin-bottom: 12px;
+}
+.deposit-page .deposit-channels label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 12px;
+  background: #f8fbff;
+  border: 1px solid #dde7f6;
+  border-radius: 9px;
+  margin: 0 !important;
+  cursor: pointer;
+}
+.deposit-page .deposit-channels input {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: #2865d3;
+}
+.deposit-channels strong {
+  font-size: 12px;
+  display: block;
+}
+.deposit-channels small {
+  font-size: 10px;
+  display: block;
+  margin-top: 6px;
+  color: #8297b1;
+}
+.deposit-review {
+  background: #f4f8ff;
+  border: 1px solid #d7e5f8;
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 20px;
+}
+.deposit-review h3 {
+  font-size: 14px;
+}
+.deposit-review .deposit-actions {
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+.deposit-warning {
+  font-size: 12px;
+  padding: 14px;
+  background: #fff2e4;
+  color: #a0783d;
+  border-radius: 8px;
+}
+@media (max-width: 760px) {
+  .deposit-product-grid {
+    grid-template-columns: 1fr;
+  }
+  .deposit-product {
+    min-height: 0;
+  }
+}
+@media (max-width: 650px) {
+  .deposit-channels {
+    grid-template-columns: 1fr;
+  }
+  .deposit-account-picker {
+    display: block;
+  }
+  .deposit-product-balance {
+    font-size: 21px;
+  }
+}
+
+/* บัญชีรับฝากเป็นข้อมูลคงที่ ไม่รับการพิมพ์หรือโฟกัส */
+.deposit-page input.deposit-locked-account:disabled {
+  background: #eef2f7;
+  color: #526b88;
+  border-color: #dbe3ee;
+  cursor: not-allowed;
+  opacity: 1;
+  -webkit-text-fill-color: #526b88;
+}
+
+.deposit-back-to-types {
+  color: #2867c8;
+  background: #fff;
+  border: 1px solid #d8e5f5;
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+@media (min-width: 761px) {
+  .deposit-product h3 {
+    min-height: 51px;
+  }
+}
+
+/* ระบบสัญญาฝากรายเดือน: เปิดดูรายละเอียดได้ภายในการ์ด */
+.deposit-monthly-contract { margin: 18px 0; padding: 14px; border: 1px solid #d7e4fb; border-radius: 12px; background: #f7faff; }
+.deposit-monthly-contract summary { cursor: pointer; color: #1760dc; font-weight: 600; }
+.deposit-monthly-contract h4 { margin: 18px 0 10px; font-size: 15px; }
+.deposit-monthly-contract .deposit-product-terms { padding: 0; margin: 0; }
+.deposit-monthly-contract dd { overflow-wrap: anywhere; }
+
+/* หน้าภายในแผนฝากรายเดือนและประมาณการตามสัญญา */
+.deposit-plan-editor { margin-bottom: 24px; }
+.deposit-plan-results { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+.deposit-plan-results > div { border: 1px solid #dce7fa; border-radius: 12px; background: #f3f7ff; padding: 16px; }
+.deposit-plan-results span { display:block; color:#6680a3; font-size:13px; }
+.deposit-plan-results strong { display:block; color:#145bd0; font-size:22px; margin-top:8px; overflow-wrap:anywhere; }
+.deposit-plan-results small { font-size:12px; }
+.deposit-plan-actions { display:flex; justify-content:flex-end; }
+@media(max-width:640px){ .deposit-plan-results { grid-template-columns:1fr; } }
+
+/* ฟอร์มตั้งค่าเงินฝากของ Admin */
+.deposit-setting-toggles { display:flex; flex-wrap:wrap; gap:18px; }
+.deposit-setting-toggles label { display:flex; align-items:center; gap:8px; }
+.deposit-setting-toggles input[type=checkbox], .deposit-form td input[type=checkbox] { width:18px; height:18px; min-height:18px; }
+.deposit-form td input[type=number] { min-width:100px; width:100%; }

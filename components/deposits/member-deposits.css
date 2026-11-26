@@ -1,0 +1,253 @@
+/* User deposit layout follows the loan page; styles stay inside this page. */
+.deposit-member {
+  max-width: 1280px;
+  color: #203650;
+}
+.deposit-member h1 {
+  font-size: 27px !important;
+  margin: 0 0 10px !important;
+}
+.deposit-member .deposit-heading {
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.deposit-member .deposit-breadcrumb {
+  color: #6f86a5;
+  margin-bottom: 9px;
+}
+.deposit-member .deposit-tabs {
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid #dce6f1;
+  padding: 0 0 12px;
+  margin-bottom: 24px;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+}
+.deposit-member .deposit-tabs button {
+  flex: 0 0 auto;
+  padding: 11px 16px;
+  background: #fff;
+  color: #607792;
+  border: 1px solid #cad7e9;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.deposit-member .deposit-tabs button[aria-pressed="true"] {
+  background: #175dca;
+  border-color: #175dca;
+  color: white;
+}
+.deposit-member .deposit-card {
+  padding: 24px;
+  border: 1px solid #dfe7f1;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px #15355404;
+}
+.deposit-member .deposit-card h2 {
+  font-size: 18px;
+  margin: 0 0 12px;
+  color: #203650;
+}
+.deposit-member .deposit-muted {
+  font-size: 12px;
+  color: #76879d;
+  line-height: 1.8;
+}
+.deposit-member .deposit-product-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+.deposit-member .deposit-product {
+  margin-bottom: 0;
+  min-height: 330px;
+  padding: 24px;
+}
+.deposit-member .deposit-product.selected {
+  border-color: #6698e5;
+  box-shadow: 0 4px 20px #1761cf0a;
+}
+.deposit-member .deposit-product-top {
+  min-height: 42px;
+  margin-bottom: 18px;
+}
+.deposit-member .deposit-product-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #eaf2ff;
+  color: #1760c9;
+}
+.deposit-member .deposit-product-icon svg {
+  width: 23px;
+  height: 23px;
+}
+.deposit-member .deposit-product h3 {
+  font-size: 18px;
+  min-height: 54px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+.deposit-member .deposit-product-description {
+  min-height: 40px;
+  font-size: 12px;
+  line-height: 1.8;
+  margin-bottom: 14px;
+  color: #76879d;
+}
+.deposit-member .deposit-product-intro {
+  padding: 12px 0;
+}
+.deposit-member .deposit-product-intro p {
+  min-height: 0;
+  margin: 8px 0 0;
+}
+.deposit-member .deposit-product-terms {
+  gap: 0;
+  margin: 14px 0;
+}
+.deposit-member .deposit-product-terms > div {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f3f8;
+  font-size: 12px;
+  gap: 12px;
+}
+.deposit-member .deposit-product-terms dd {
+  font-weight: 600;
+}
+.deposit-member .deposit-product .deposit-note {
+  padding: 12px;
+  font-size: 11px;
+  margin: 4px 0 14px;
+}
+.deposit-member .deposit-product-account {
+  margin-top: auto;
+  padding: 14px 0 18px;
+}
+.deposit-member .deposit-product-account > strong {
+  font-size: 22px;
+  color: #175dca;
+}
+.deposit-member .deposit-product > button {
+  background: #175dca;
+  border: 1px solid #175dca;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+.deposit-member .deposit-balance {
+  background: transparent;
+  color: #203650;
+  padding: 0;
+  gap: 20px;
+  border-radius: 0;
+}
+.deposit-member .deposit-balance > div {
+  background: #fff;
+  border: 1px solid #dfe7f1;
+  border-radius: 16px;
+  padding: 20px;
+  min-width: 0;
+}
+.deposit-member .deposit-balance p,
+.deposit-member .deposit-balance span,
+.deposit-member .deposit-balance strong small {
+  color: #72869f;
+}
+.deposit-member .deposit-balance strong {
+  color: #175dca;
+  font-size: 30px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  margin: 10px 0 12px;
+}
+.deposit-member .deposit-columns {
+  grid-template-columns: minmax(0, 1.8fr) minmax(260px, 1fr);
+  gap: 22px;
+}
+.deposit-member .deposit-form {
+  background: #f7faff;
+  border: 1px solid #e3ebf6;
+  padding: 18px;
+  border-radius: 12px;
+}
+.deposit-member .deposit-form-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.deposit-member .deposit-form input:not([type="radio"]):not([type="checkbox"]),
+.deposit-member select {
+  border: 1px solid #ceddf0;
+  border-radius: 8px;
+  background: #fff;
+  min-height: 42px;
+  padding: 10px 12px;
+}
+.deposit-member .deposit-form input:disabled {
+  background: #eef2f7;
+}
+.deposit-member button {
+  font-size: 13px;
+  border-radius: 8px;
+}
+.deposit-member .deposit-primary {
+  background: #175dca;
+  border-color: #175dca;
+}
+.deposit-member .deposit-plan-actions {
+  margin: 20px 0 0;
+}
+.deposit-member .deposit-plan-actions > button {
+  min-width: 210px;
+  padding: 12px 18px;
+}
+.deposit-member button:focus-visible,
+.deposit-member input:focus-visible,
+.deposit-member select:focus-visible {
+  outline: 3px solid #93b7fa;
+  outline-offset: 2px;
+}
+@media (max-width: 1100px) {
+  .deposit-member .deposit-product-grid,
+  .deposit-member .deposit-columns {
+    grid-template-columns: 1fr;
+  }
+  .deposit-member .deposit-product h3,
+  .deposit-member .deposit-product-description {
+    min-height: 0;
+  }
+  .deposit-member .deposit-product {
+    min-height: 0;
+  }
+}
+@media (max-width: 650px) {
+  .deposit-member h1 {
+    font-size: 23px !important;
+  }
+  .deposit-member .deposit-card {
+    padding: 18px;
+  }
+  .deposit-member .deposit-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .deposit-member .deposit-form-grid,
+  .deposit-member .deposit-balance {
+    grid-template-columns: 1fr;
+  }
+  .deposit-member .deposit-balance > div + div {
+    padding: 20px;
+    border-top: 1px solid #dfe7f1;
+  }
+  .deposit-member .deposit-form {
+    padding: 14px;
+  }
+  .deposit-member .deposit-plan-actions > button {
+    width: 100%;
+  }
+}

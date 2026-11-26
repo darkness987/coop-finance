@@ -1,0 +1,23 @@
+
+node_modules/
+.next/
+.vercel/
+.env*
+*.tsbuildinfo
+*.log
+
+# Runtime and private local data
+/database/data.ts
+/database/data.ts.*
+/database/previous-shares-database.txt
+*.lock
+*.tmp
+*.bak
+*.sqlite
+*.sqlite3
+*.db
+.DS_Store
+
+# Historical projects are kept locally; this repository contains the current app.
+/archive/
+/Project/

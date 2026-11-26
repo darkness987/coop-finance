@@ -1,0 +1,456 @@
+/* ระบบ: หน้าหลักและภาพรวม | รูปแบบการแสดงผลของ Home.module.css */
+.home {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.greeting {
+  margin: 0 0 23px;
+}
+.greeting h1 {
+  font-size: 23px !important;
+  font-weight: 700;
+  color: #17283e;
+  margin: 0 0 7px !important;
+}
+.greeting p {
+  color: #8796a8;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* การ์ดสรุป: ขนาดและแนวยอดเงินตรงกัน สีใช้แยกหมวดที่ไอคอน */
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.kpi {
+  --accent: #2164cc;
+  --tint: #edf4ff;
+  background: #fff;
+  border: 1px solid #dfe7f2;
+  border-radius: 14px;
+  padding: 17px;
+  min-width: 0;
+  box-sizing: border-box;
+  box-shadow: 0 3px 12px #203c6610;
+  display: flex;
+  flex-direction: column;
+  color: #213750;
+}
+.kpiHeader {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  min-height: 32px;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #5b6f89;
+}
+.kpiIcon {
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: var(--tint);
+}
+.kpiIcon svg {
+  width: 18px;
+  height: 18px;
+}
+.kpiAmount {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 14px 0 12px;
+}
+.kpiAmount strong {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.kpiAmount > span {
+  color: #8696aa;
+  font-size: 10px;
+}
+.kpiCaption {
+  min-height: 30px;
+  margin-top: auto;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #8393a8;
+}
+.blue {
+  --accent: #2164cc;
+  --tint: #edf4ff;
+}
+.green {
+  --accent: #15946e;
+  --tint: #eaf8f2;
+}
+.purple {
+  --accent: #7854ce;
+  --tint: #f2edff;
+}
+.light {
+  --accent: #c18a20;
+  --tint: #fff6e6;
+}
+.middle {
+  display: grid;
+  grid-template-columns: 2.1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.card {
+  background: white;
+  border: 1px solid #e0e6ee;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 4px #17314d03;
+  min-width: 0;
+  box-sizing: border-box;
+}
+.card h2 {
+  font-size: 14px;
+  color: #263950;
+  margin: 0;
+  font-weight: 700;
+}
+.card > p,
+.cardTitle p {
+  font-size: 11px;
+  color: #8a99aa;
+  margin: 6px 0;
+}
+.cardTitle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.cardTitle a {
+  color: #1461bf;
+  font-size: 11px;
+  text-decoration: none;
+}
+.chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chart select {
+  font-size: 11px !important;
+  width: auto !important;
+  background: #f4f7fb !important;
+  padding: 7px 9px !important;
+}
+.chart svg {
+  width: 100%;
+  height: auto;
+  margin-top: 12px;
+}
+.chart svg text {
+  fill: #8a99aa;
+  font-size: 10px;
+}
+.donut {
+  position: relative;
+  max-width: 180px;
+  margin: 10px auto;
+}
+.donut svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.donut > div {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.donut small {
+  font-size: 10px;
+  color: #8a99aa;
+}
+.donut strong {
+  font-size: 15px;
+  margin-top: 5px;
+}
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 10px;
+  color: #65768b;
+}
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.legend i {
+  height: 8px;
+  width: 8px;
+  display: block;
+  border-radius: 50%;
+}
+.quick {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.quick h2 {
+  margin-bottom: 5px;
+}
+.quick a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 10px;
+  background: #f8fafc;
+  border: 1px solid #e1e8f1;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #263950;
+  font-size: 11px;
+  flex: 1;
+}
+.quick a svg {
+  width: 17px;
+  height: 17px;
+  color: #0b5ed7;
+  flex: none;
+}
+.quick a b {
+  margin-left: auto;
+  color: #8796a8;
+  font-size: 18px;
+}
+.quick a:hover {
+  background: #eff6ff;
+}
+.bottom {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 18px;
+}
+.transaction {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid #edf1f6;
+  text-decoration: none;
+  color: #263950;
+}
+.transaction:last-child {
+  border-bottom: 0;
+}
+.transaction strong {
+  font-size: 12px;
+  display: block;
+}
+.transaction small {
+  font-size: 10px;
+  color: #8a99aa;
+  margin-top: 4px;
+}
+.transaction > b {
+  font-size: 12px;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.arrow {
+  height: 32px;
+  width: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eaf8ee;
+  color: #129642;
+  flex: none;
+}
+.positive {
+  color: #129642;
+}
+.negative {
+  color: #dc4747;
+}
+.tracker {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.tracker h3 {
+  font-size: 18px;
+  margin: 18px 0;
+}
+.tracker progress {
+  width: 100%;
+  height: 14px;
+  accent-color: #145bba;
+}
+.tracker p {
+  color: #245a9f;
+  font-size: 13px;
+}
+.primary {
+  display: inline-block;
+  background: #0b47c4;
+  color: white;
+  padding: 11px 20px;
+  text-decoration: none;
+  border-radius: 9px;
+  font-size: 12px;
+  margin-top: auto;
+}
+.empty {
+  text-align: center;
+  padding: 24px 10px;
+  color: #8796a8;
+  font-size: 12px;
+  align-self: stretch;
+}
+.empty svg {
+  width: 32px;
+  height: 32px;
+}
+.greeting span {
+  font-size: 24px;
+}
+@media (max-width: 1200px) {
+  .kpi {
+    padding: 16px 14px;
+  }
+  .kpi strong {
+    font-size: 23px;
+  }
+  .middle {
+    grid-template-columns: 1.6fr 1fr;
+  }
+  .quick {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .quick h2 {
+    grid-column: 1/-1;
+  }
+  .quick a {
+    padding: 12px 8px;
+  }
+}
+@media (max-width: 850px) {
+  .kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bottom {
+    grid-template-columns: 1fr;
+  }
+  .middle {
+    grid-template-columns: 1fr;
+  }
+  .quick {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .donut {
+    max-width: 160px;
+  }
+  .card {
+    padding: 18px;
+  }
+  .kpi strong {
+    font-size: 25px;
+  }
+}
+@media (max-width: 380px) {
+  .kpi strong {
+    font-size: 20px;
+  }
+  .kpiHeader {
+    font-size: 11px;
+  }
+  .kpi {
+    padding: 12px;
+  }
+  .kpiIcon {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+.pendingLoan {
+  padding: 16px 0 20px;
+}
+.pendingLoan > span {
+  font-size: 11px;
+  color: #8d722e;
+  background: #fff5df;
+  padding: 7px 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.pendingLoan small {
+  font-size: 11px;
+  color: #8396ae;
+  line-height: 1.8;
+  margin-top: 12px;
+}
+
+/* แจ้งส่งหุ้นแล้ว: กลับดูหน้าหลักได้โดยยอดที่รอตรวจไม่รวมในหุ้นสะสม */
+.initialPending {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  border: 1px solid #ead8ab;
+  background: #fff9ec;
+  border-radius: 12px;
+  color: #795613;
+  font-size: 13px;
+}
+.initialPending p {
+  margin: 6px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.initialPending a {
+  flex-shrink: 0;
+  padding: 10px 14px;
+  background: #fff;
+  border: 1px solid #ead8ab;
+  border-radius: 8px;
+  color: #795613;
+  text-decoration: none;
+}
+@media (max-width: 700px) {
+  .initialPending {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.greeting > a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #2164cc;
+  text-decoration: none;
+}

@@ -1,0 +1,220 @@
+/* ระบบ: เส้นทาง app | รูปแบบการแสดงผลของ styles.css */
+body {
+  margin: 0;
+  background: #f5f6fc;
+  color: #202b49;
+  font-family: Arial, sans-serif;
+}
+.unified {
+  display: flex;
+  min-height: 100vh;
+}
+.main-nav {
+  width: 240px;
+  flex-shrink: 0;
+  background: #20183f;
+  color: white;
+  padding: 28px 18px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.main-nav .logo {
+  font-size: 19px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+.main-nav p {
+  font-size: 12px;
+  color: #c9bedf;
+  margin-top: 30px;
+}
+.main-nav nav {
+  display: grid;
+  gap: 5px;
+}
+.main-nav nav a {
+  color: #eee7ff;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.main-nav nav a:hover,
+.main-nav nav a[aria-current="page"] {
+  background: #6135b2;
+}
+.main-nav small {
+  display: block;
+  margin: 30px 0 15px;
+}
+.main-nav button {
+  width: 100%;
+}
+.workspace {
+  flex: 1;
+  min-width: 0;
+  padding: 36px;
+  max-width: 1400px;
+}
+.workspace h1 {
+  font-size: 30px;
+  margin: 8px 0 14px;
+}
+.workspace header {
+  margin-bottom: 24px;
+}
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+.home-grid .panel {
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+}
+.workspace > .panel,
+.workspace > div > .panel {
+  padding: 22px;
+}
+.workspace .form {
+  max-width: 620px;
+}
+.workspace label {
+  display: block;
+  margin: 12px 0;
+}
+.workspace input,
+.workspace select,
+.login input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #d4d7e7;
+  border-radius: 7px;
+  background: white;
+  font: inherit;
+}
+.workspace input[type="checkbox"] {
+  display: inline;
+  width: auto;
+}
+.workspace .actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+.workspace button,
+.login button {
+  cursor: pointer;
+  padding: 10px 16px;
+  border: 1px solid #c8c6dd;
+  border-radius: 8px;
+}
+.workspace button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+.workspace .panel {
+  margin-bottom: 20px;
+}
+.workspace summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 12px 0;
+}
+.workspace li {
+  margin: 12px 0;
+}
+.workspace small {
+  display: block;
+}
+.workspace .error {
+  padding: 16px;
+  background: #ffe5e5;
+  color: #a32424;
+}
+.login {
+  max-width: 430px;
+  margin: 12vh auto;
+  padding: 35px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 10px 60px #17104312;
+}
+.login label {
+  display: block;
+  margin: 20px 0;
+}
+.login button {
+  width: 100%;
+}
+.module-content {
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .unified {
+    display: block;
+  }
+  .main-nav {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+  .main-nav nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-nav nav a {
+    padding: 8px;
+  }
+  .main-nav small,
+  .main-nav > p {
+    margin: 12px 0;
+  }
+  .workspace {
+    padding: 18px;
+  }
+  .main-nav button {
+    width: auto;
+  }
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* รายละเอียดสมาชิกสำหรับเจ้าหน้าที่ */
+.member-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 22px;
+}
+.member-detail-grid small {
+  font-size: 11px;
+  color: #8b9db3;
+}
+.member-detail-grid strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 8px;
+  line-height: 1.8;
+}
+@media (max-width: 900px) {
+  .member-detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .member-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}

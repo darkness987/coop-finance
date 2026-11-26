@@ -1,0 +1,134 @@
+/* ระบบ: ยืนยัน OTP | รูปแบบการแสดงผลของ transaction-otp.css */
+/* หน้าต่าง OTP ถอนเงินจากระบบเดิม แยกจากแบบฟอร์มฝากเงิน */
+.transaction-otp {
+  width: min(430px, calc(100vw - 32px));
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 28px;
+  border: 1px solid #dce6f3;
+  border-radius: 18px;
+  color: #203650;
+  box-shadow: 0 20px 70px #102b4f30;
+}
+.transaction-otp::backdrop {
+  background: #10233c66;
+}
+.transaction-otp h2 {
+  font-size: 19px;
+  margin: 12px 0 6px;
+  text-align: center;
+}
+.transaction-otp > .otp-muted {
+  text-align: center;
+}
+.transaction-otp .transaction-otp-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 0;
+  background: transparent;
+  font-size: 24px;
+  padding: 2px 8px;
+  color: #8193a9;
+}
+.transaction-otp-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #eaf3ff;
+  color: #2864d6;
+  font-size: 23px;
+}
+.transaction-otp-summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px;
+  margin: 16px 0;
+  border-radius: 8px;
+  background: #f3f7fc;
+  font-size: 12px;
+}
+.transaction-otp-demo {
+  background: #fff8e9;
+  color: #8a691e;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.transaction-otp-demo b {
+  letter-spacing: 3px;
+}
+.transaction-otp-digits {
+  display: flex;
+  gap: 8px;
+  margin: 18px 0 10px;
+}
+.transaction-otp .transaction-otp-digits input {
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  padding: 4px;
+  text-align: center;
+  font-size: 23px;
+  border: 1px solid #ccdbee;
+  border-radius: 8px;
+}
+.transaction-otp-timer {
+  text-align: center;
+  font-size: 11px;
+  color: #8092aa;
+}
+.transaction-otp .transaction-otp-resend {
+  display: block;
+  margin: 8px auto 16px;
+  padding: 4px;
+  border: 0;
+  color: #2864d6;
+  background: transparent;
+  font-size: 12px;
+}
+.transaction-otp .otp-actions {
+  display: flex;
+  gap: 10px;
+}
+.transaction-otp .otp-actions button {
+  flex: 1;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.transaction-otp {
+  background: white;
+  font:
+    14px Thonburi,
+    Arial,
+    sans-serif;
+}
+.transaction-otp .otp-muted,
+.transaction-otp .otp-note {
+  color: #7186a0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.transaction-otp .otp-actions button {
+  border: 1px solid #ccdbee;
+  border-radius: 8px;
+  background: white;
+  color: #234265;
+  cursor: pointer;
+}
+.transaction-otp .otp-actions .otp-primary {
+  background: #2161dc;
+  border-color: #2161dc;
+  color: white;
+}
+.transaction-otp button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

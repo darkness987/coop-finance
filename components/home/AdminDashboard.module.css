@@ -1,0 +1,637 @@
+/* ระบบ: หน้าหลักและภาพรวม | รูปแบบการแสดงผลของ AdminDashboard.module.css */
+.page {
+  max-width: 1400px;
+  margin: auto;
+  color: #182e4d;
+}
+.intro {
+  margin-bottom: 18px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.intro p {
+  margin: 0;
+  color: #7186a3;
+  font-size: 12px;
+}
+.intro h1 {
+  font-size: 23px !important;
+  margin: 0 !important;
+  order: -1;
+}
+.intro > span {
+  margin-left: auto;
+  color: #8596ac;
+  font-size: 10px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.stat,
+.card {
+  background: #fff;
+  border: 1px solid #dfe7f2;
+  border-radius: 14px;
+  min-width: 0;
+}
+.stat {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 20px 15px;
+}
+.stat > span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  flex: none;
+}
+.stat svg {
+  width: 27px;
+  height: 27px;
+}
+.blue {
+  color: #136cef;
+  background: #edf5ff;
+}
+.amber {
+  color: #e49b14;
+  background: #fff6df;
+}
+.purple {
+  color: #7441ee;
+  background: #f1ebff;
+}
+.stat h2 {
+  font-size: 12px !important;
+  margin: 0 0 8px !important;
+  line-height: 1.5;
+}
+.stat strong {
+  font-size: clamp(17px, 1.6vw, 25px);
+  font-weight: 700;
+  display: block;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.stat small {
+  display: block;
+  color: #7a8ea9;
+  font-size: 10px;
+  margin-top: 7px;
+}
+.chartGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: stretch;
+  margin-bottom: 28px;
+}
+.card {
+  padding: 18px;
+}
+.heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-bottom: 12px;
+}
+.headingIcon {
+  color: #357cfa;
+  background: #edf4ff;
+  border-radius: 9px;
+  padding: 6px;
+  display: grid;
+  place-items: center;
+}
+.headingIcon svg {
+  width: 22px;
+  height: 22px;
+}
+.heading h2 {
+  font-size: 14px !important;
+  line-height: 1.45;
+  margin: 0 !important;
+  font-weight: 700;
+}
+.heading p {
+  font-size: 10px;
+  color: #8292ad;
+  margin: 4px 0 0;
+  line-height: 1.5;
+}
+.heading > a {
+  margin-left: auto;
+  white-space: nowrap;
+  text-decoration: none;
+  background: #f1f6ff;
+  padding: 7px 9px;
+  border-radius: 8px;
+  font-size: 10px;
+  color: #2169d5;
+}
+.heading > a span {
+  margin-left: 9px;
+}
+.heading select {
+  margin-left: auto;
+  width: auto !important;
+  max-width: 130px;
+  background: #f5f8ff;
+  font-size: 10px !important;
+  padding: 7px !important;
+  height: auto;
+  border: 1px solid #edf1fa;
+  border-radius: 8px;
+  color: #294c7b;
+}
+.chartKeys {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  font-size: 10px;
+  color: #667b9b;
+}
+.chartKeys span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.chartKeys i,
+.legend i {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex: none;
+}
+.trend {
+  display: block;
+  width: 100%;
+  height: 215px;
+}
+.trend text {
+  font-size: 10px;
+  fill: #7a8eac;
+}
+.donutLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.donut {
+  width: 166px;
+  position: relative;
+  max-width: 100%;
+  flex: none;
+}
+.donut svg {
+  width: 100%;
+  display: block;
+}
+.donut > div {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.donut strong {
+  font-size: 17px;
+}
+.donut small {
+  font-size: 9px;
+  color: #8290a6;
+}
+.legend {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.legend li {
+  display: flex;
+  gap: 5px;
+  align-items: flex-start;
+  font-size: 10px;
+  color: #546782;
+}
+.legend li > i {
+  margin-top: 4px;
+}
+.legend b {
+  display: block;
+  font-size: 10px;
+  margin-top: 4px;
+  color: #1f3553;
+}
+.legend small {
+  display: block;
+  font-weight: 400;
+  color: #8190a5;
+  margin-top: 3px;
+}
+.approval {
+  border-color: #b596ff;
+  box-shadow: 0 0 0 1px #d9cbff;
+}
+.bottomGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.sideStack {
+  display: grid;
+  gap: 14px;
+}
+.tableWrap {
+  overflow: auto;
+}
+.page table {
+  width: 100%;
+  min-width: 0;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+.page th {
+  padding: 11px 8px;
+  background: #f4f7fd;
+  color: #617797;
+  text-align: left;
+  font-size: 10px;
+  white-space: normal;
+}
+.page td {
+  padding: 13px 8px;
+  border-bottom: 1px solid #e9eef8;
+  color: #344b69;
+}
+.page td a {
+  color: #2469cc;
+  text-decoration: none;
+}
+.page td small {
+  display: block;
+  font-size: 9px;
+  color: #8c9ab0;
+  margin-top: 4px;
+}
+.numeric {
+  text-align: right;
+  white-space: nowrap;
+}
+.badge {
+  font-size: 9px;
+  background: #fff0ca;
+  color: #9b6910;
+  border-radius: 12px;
+  padding: 4px 7px;
+  white-space: nowrap;
+}
+.notice {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  padding: 11px 0;
+  text-decoration: none;
+  color: #354966;
+  border-bottom: 1px solid #edf1f8;
+}
+.notice:last-child {
+  border-bottom: 0;
+}
+.notice > svg {
+  width: 17px;
+  height: 17px;
+  color: #2e80f7;
+  flex: none;
+}
+.notice > div {
+  min-width: 0;
+}
+.notice strong {
+  font-size: 11px;
+  font-weight: 500;
+  display: block;
+  line-height: 1.5;
+}
+.notice small {
+  font-size: 10px;
+  color: #8292aa;
+  display: block;
+  margin-top: 3px;
+}
+.notice > span:last-child,
+.notice time {
+  margin-left: auto;
+  font-size: 9px;
+  color: #7287a5;
+  white-space: nowrap;
+}
+.activityDot {
+  width: 8px;
+  height: 8px;
+  background: #2ac484;
+  border-radius: 50%;
+  flex: none;
+}
+.empty {
+  font-size: 11px;
+  color: #8b9ab0;
+  text-align: center;
+  padding: 14px !important;
+  line-height: 1.6;
+}
+.workQueue {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+.workQueue a {
+  background: #fff;
+  border: 1px solid #e1e9f6;
+  border-radius: 10px;
+  padding: 11px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #607998;
+  font-size: 10px;
+  text-decoration: none;
+}
+.workQueue b {
+  margin-left: auto;
+  background: #edf3ff;
+  color: #246ad3;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+.page a:focus-visible {
+  outline: 2px solid #2268e8;
+  outline-offset: 3px;
+}
+.page a:hover {
+  color: #165fd6;
+}
+@media (min-width: 1550px) {
+  .donutLayout {
+    flex-direction: row;
+  }
+  .legend {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .donut {
+    width: 170px;
+  }
+}
+@media (max-width: 1150px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .chartGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .chartGrid > .card:first-child {
+    grid-column: 1/-1;
+  }
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+  .workQueue {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 650px) {
+  .card {
+    padding: 14px;
+  }
+  .stat {
+    padding: 14px 10px;
+    gap: 8px;
+  }
+  .stat > span {
+    width: 32px;
+    height: 32px;
+  }
+  .stat h2 {
+    font-size: 11px !important;
+  }
+  .stat strong {
+    font-size: 17px;
+  }
+  .chartGrid {
+    grid-template-columns: 1fr;
+  }
+  .chartGrid > .card:first-child {
+    grid-column: auto;
+  }
+  .donutLayout {
+    flex-direction: row;
+  }
+  .legend {
+    flex-direction: column;
+  }
+  .donut {
+    width: 150px;
+  }
+  .workQueue {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .intro > span {
+    margin-left: 0;
+  }
+  .trend {
+    height: auto;
+  }
+  .heading select {
+    max-width: 110px;
+  }
+  .notice time {
+    font-size: 8px;
+  }
+}
+
+/* การ์ดประเภทสินเชื่อ: วงแหวนซ้าย รายชื่อและเปอร์เซ็นต์ขวาตามภาพตัวอย่าง */
+.loanTypeCard {
+  border-color: #e6dff4;
+  background: #fff;
+}
+.loanTypeCard .headingIcon {
+  color: #7135e8;
+  background: #f0e8ff;
+  border-radius: 50%;
+}
+.loanTypeCard .heading {
+  margin-bottom: 20px;
+}
+.loanTypeCard .heading p {
+  color: #657298;
+}
+.loanTypeLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 190px;
+}
+.loanTypeLayout .donut {
+  width: 100%;
+  max-width: 205px;
+}
+.loanTypeLayout .donut strong {
+  font-size: clamp(13px, 1.5vw, 23px);
+  color: #222231;
+}
+.loanTypeLayout .donut small {
+  font-size: 9px;
+  color: #5e6688;
+}
+.loanTypeLayout .legend {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 18px;
+}
+.loanTypeLayout .legend li {
+  align-items: center;
+  gap: 7px;
+  color: #242333;
+  font-size: 11px;
+}
+.loanTypeLayout .legend li > i {
+  width: 10px;
+  height: 12px;
+  border-radius: 3px;
+  margin: 0;
+}
+.loanTypeLayout .legend li > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  flex: 1;
+  min-width: 0;
+}
+.loanTypeLayout .legend b {
+  font-size: 12px;
+  margin: 0;
+  color: #242333;
+  white-space: nowrap;
+}
+.loanTypeCard .empty {
+  margin: 8px 0 0;
+  padding: 6px !important;
+}
+@media (min-width: 1151px) and (max-width: 1549px) {
+  .chartGrid {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1.15fr) minmax(0, 1fr);
+  }
+}
+@media (max-width: 1150px) {
+  .loanTypeLayout .legend li {
+    font-size: 13px;
+  }
+  .loanTypeLayout .legend b {
+    font-size: 14px;
+  }
+  .loanTypeLayout .donut strong {
+    font-size: 23px;
+  }
+  .loanTypeLayout .donut small {
+    font-size: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .loanTypeLayout {
+    gap: 8px;
+  }
+  .loanTypeLayout .legend li {
+    font-size: 11px;
+  }
+  .loanTypeLayout .legend b {
+    font-size: 12px;
+  }
+  .loanTypeLayout .donut strong {
+    font-size: 18px;
+  }
+}
+
+.contractBreakdown {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  border-top: 1px solid #eee8f8;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+.contractBreakdown > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.contractBreakdown span {
+  color: #7e88a1;
+  font-size: 10px;
+}
+.contractBreakdown strong {
+  font-size: 11px;
+  color: #4f3786;
+  overflow-wrap: anywhere;
+}
+
+.demoBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #dcd0fa;
+  background: #f5f0ff;
+  border-radius: 12px;
+  color: #5e3c98;
+}
+.demoBanner strong {
+  font-size: 12px;
+}
+.demoBanner p {
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 4px 0 0;
+  color: #827099;
+}
+.demoBanner button {
+  flex: none;
+  border: 1px solid #cfbdf4;
+  background: #fff;
+  color: #6338ae;
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-size: 11px;
+  cursor: pointer;
+}
+@media (max-width: 650px) {
+  .demoBanner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

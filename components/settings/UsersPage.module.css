@@ -1,0 +1,168 @@
+/* ระบบ: ตั้งค่าและจัดการสิทธิ์ | รูปแบบการแสดงผลของ UsersPage.module.css */
+.page {
+  max-width: 1200px;
+  margin: auto;
+}
+.intro h1 {
+  font-size: 25px;
+  margin: 0 0 7px;
+}
+.intro p {
+  font-size: 13px;
+  color: #7b8ea7;
+  margin: 0 0 20px;
+}
+.roleGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.roleCard {
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #dce6f4;
+  border-radius: 12px;
+}
+.roleCard strong {
+  font-size: 13px;
+  color: #214e8c;
+}
+.roleCard p {
+  font-size: 11px;
+  color: #7a8ea8;
+  line-height: 1.7;
+  margin: 5px 0 0;
+}
+.card {
+  background: #fff;
+  border: 1px solid #dce6f4;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+.card h2 {
+  font-size: 17px;
+  margin: 0 0 18px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.grid label {
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.grid input,
+.grid select {
+  height: 43px;
+  border: 1px solid #cfddf1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font: inherit;
+  color: #263e5d;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.roleHint {
+  font-size: 12px;
+  color: #687ea0;
+  background: #f3f7ff;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 16px;
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+.actions button {
+  background: #2464db;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 30px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 620px;
+}
+.table th {
+  text-align: left;
+  padding: 12px;
+  background: #f2f6fd;
+  color: #7389a5;
+  font-size: 11px;
+}
+.table td {
+  padding: 13px 12px;
+  border-bottom: 1px solid #edf2f9;
+}
+.table select {
+  font-size: 12px;
+  padding: 7px;
+  border: 1px solid #d6e1f0;
+  border-radius: 7px;
+  background: #fff;
+  color: #2a4568;
+}
+.table button {
+  padding: 7px 12px;
+  border: 1px solid #d2def1;
+  border-radius: 7px;
+  background: #fff;
+  color: #3166af;
+  cursor: pointer;
+}
+.note {
+  font-size: 11px;
+  color: #7d8faa;
+  line-height: 1.7;
+}
+.active {
+  color: #159565;
+}
+.inactive {
+  color: #b37b21;
+}
+.overflow {
+  overflow: auto;
+}
+.page button:disabled,
+.page select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+@media (max-width: 750px) {
+  .roleGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 16px;
+  }
+}
+@media (max-width: 450px) {
+  .roleGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card:last-child .overflow {
+  max-height: 360px;
+  overflow: auto;
+}
